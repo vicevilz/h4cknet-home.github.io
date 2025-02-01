@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install tailwindcss daisyui
+          npm install
 
       - name: Build Tailwind CSS
         run: |
@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          mv output.css public/output.css  # Puedes ajustar la ruta según tu estructura de proyecto
+          mv output.css public/output.css  # Ajusta la ruta según tu estructura de proyecto
           git add public/output.css
           git commit -m "Generate Tailwind CSS"
           git push
